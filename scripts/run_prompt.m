@@ -20,8 +20,8 @@ function proj = run_prompt(modelName,target_subsystem_name,harness)
     proj.MakeHarness();
     %% データ生成実行
     %-- オプション設定
-    proj.GenerateOption.MaxProcessTimeSec = 2500;               %-- タイムアウト[sec]
-    proj.GenerateOption.MaxCandidates     = 500;               %-- 試行回数
+    proj.GenerateOption.MaxProcessTimeSec = 1000;               %-- タイムアウト[sec]
+    proj.GenerateOption.MaxCandidates     = 250;               %-- 試行回数
     proj.GenerateOption.StopTime          = str2double(get_param(modelName,'FixedStep'))*1000;          %-- テストケースの長さ（時間）
     %proj.GenerateOption.CalibrationSettingFile = 'calib.txt'; %定数キャリブレーション
     %-- 実行
